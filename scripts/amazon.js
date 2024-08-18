@@ -1,4 +1,6 @@
 let htmlElem="";
+let cartQuantity=0;
+document.querySelector(".cart-quantity").innerHTML=cartQuantity;
 
 products.forEach(product=>{
   htmlElem+=
@@ -68,12 +70,17 @@ document.querySelectorAll('.js-add-to-cart').forEach((button)=>{
       }
       else{
         cart.push({
-          ProductName:productId.name,
           productId:productId,
           quantity:1
         });
       }
+      cartQuantity=0;
 
+      cart.forEach(ele => {
+        cartQuantity+=ele.quantity;
+        document.querySelector(".cart-quantity").innerHTML=cartQuantity;
+      });
+      console.log(cartQuantity);
       console.log(cart);
       
   });
