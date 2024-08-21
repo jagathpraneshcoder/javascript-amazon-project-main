@@ -14,7 +14,7 @@ cart.forEach((cartItems)=>{
       matchingProduct=product;
     }
   })
-  console.log(matchingProduct);
+  
 
 htmlElem+=
   `<div class="cart-item-container">
